@@ -23,8 +23,6 @@ export interface HeaderProps {
 const NAV_LINKS_LIST = [
   { label: 'Home', target: routes.HOME },
   { label: 'Explore', target: routes.RAFFLES },
-  { label: 'Stake', target: routes.STAKE },
-  { label: 'Tools', target: routes.TOOLS },
   { label: 'Admin Panel', target: routes.ADMIN.HOME, admin: true },
 ];
 
@@ -77,7 +75,7 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
                 className={classes.homeButton}
               >
                 <img
-                  src="/dRaffle-LC-banner.png"
+                  src="/dRaffle-logo.png"
                   alt={'Site banner'}
                   className={classes.homeButtonIcon}
                 />
@@ -95,7 +93,7 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
                   style={{ marginRight: '20px' }}
                 />
               ))}
-              {connected && TESTING && <AirdropButton />}
+              {connected && TESTING }
               <div className={classes.walletButtonContainer}>
                 <WalletButton />
               </div>
